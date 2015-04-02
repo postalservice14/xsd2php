@@ -1,0 +1,17 @@
+#!/usr/bin/env php
+<?php
+$paths = [
+    __DIR__ . '/../vendor/autoload.php',
+    __DIR__ . '/../../../autoload.php'
+];
+foreach ($paths as $path) {
+    if (is_file($path)) {
+        include $path;
+        break;
+    }
+}
+
+use Goetas\Xsd\XsdToPhp\Console\ConsoleRunner;
+
+$cli = new ConsoleRunner();
+$cli->run();

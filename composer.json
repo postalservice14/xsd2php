@@ -22,13 +22,16 @@
 		"symfony/class-loader" : "2.*"
 	},
 	"autoload" : {
-		"psr-0" : {
-			"Goetas\\Xsd\\XsdToPhp" : "lib/"
+		"psr-4" : {
+			"Goetas\\Xsd\\XsdToPhp\\" : "lib/"
 		}
 	},
 	"extra" : {
 		"branch-alias" : {
-			"dev-master" : "1.0-dev"
+			"dev-master" : "2.0-dev"
 		}
-	}
+	},
+    "bin": [
+	    "bin/xsd2php"
+    ]
 }
